@@ -18,7 +18,7 @@ const Conn = async (req: Request, res: Response) => {
             const token = data.data.token;
             const config: AxiosRequestConfig = {
                 method: 'patch',
-                url: 'https://comlurb-dev-default-rtdb.firebaseio.com/bysatcredential.json',
+                url: 'https://comlurb-406714-default-rtdb.firebaseio.com/bysatcredential.json',
                 data: {
                     token,
                     time

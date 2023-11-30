@@ -1,9 +1,7 @@
-FROM node:16.14.0
-WORKDIR /usr/src/app
-COPY src ./src
-COPY .env ./
-COPY package*.json ./
-COPY tsconfig.json ./
-RUN npm i
+FROM node:latest
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
 EXPOSE 8080
 CMD ["npm","run","prod"]
